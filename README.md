@@ -2,7 +2,7 @@
 
 ## docker
 
-> docker run -d --name rssbot .
+> docker run -d --name clash .
 
 ## docker-compose
 

@@ -6,7 +6,6 @@ WORKDIR /clash-src
 COPY --from=tonistiigi/xx:golang / /
 ADD https://api.github.com/repos/uchuhimo/clash/git/refs/heads/master /clash-version.json
 RUN git clone --depth 1 https://github.com/uchuhimo/clash.git .
-RUN go env -w GOPROXY=https://goproxy.cn,direct
 RUN go mod download && \
     make docker && \
     mv ./bin/clash-docker /clash
